@@ -1,0 +1,24 @@
+# System settings
+
+## Paths for executables ##
+findExecPaths() {
+	PATH=/Software/Core/Command-line/bin
+	NEWPATH=
+	NEWPATH=$NEWPATH:`find /Apps/*/bin -maxdepth 0 -type d -printf "%p:"`
+	NEWPATH=$NEWPATH:`find /Software/Core/*/bin -maxdepth 0 -type d -printf "%p:"`
+	NEWPATH=$NEWPATH:`find /Software/Extras/*/bin -maxdepth 0 -type d -printf "%p:"`
+	NEWPATH=$NEWPATH:`find /Apps/*/sbin -maxdepth 0 -type d -printf "%p:"`
+	NEWPATH=$NEWPATH:`find /Software/Core/*/sbin -maxdepth 0 -type d -printf "%p:"`
+	NEWPATH=$NEWPATH:`find /Software/Extras/*/sbin -maxdepth 0 -type d -printf "%p:"`
+	export PATH=$NEWPATH
+}
+findExecPaths 2>>/Shell/dev/null
+
+## Paths for libraries ##
+export LD_LIBRARY_PATH=/Shell/lib
+
+## Colourise "ls" ##
+alias ls="ls --color=auto"
+
+## Show current working directory in prompt ##
+PS1="\w> "

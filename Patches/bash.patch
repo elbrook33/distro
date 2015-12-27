@@ -1,0 +1,20 @@
+diff -c bash-4.3.30.old/pathnames.h.in bash-4.3.30.new/pathnames.h.in
+*** bash-4.3.30.old/pathnames.h.in	2015-12-26 21:53:54.840028262 +1100
+--- bash-4.3.30.new/pathnames.h.in	2015-12-26 21:54:50.521907764 +1100
+***************
+*** 25,31 ****
+  #define DEFAULT_HOSTS_FILE "/etc/hosts"
+  
+  /* The default login shell startup file. */
+! #define SYS_PROFILE "/etc/profile"
+  
+  /* The default location of the bash debugger initialization/startup file. */
+  #define DEBUGGER_START_FILE	"@DEBUGGER_START_FILE@"
+--- 25,31 ----
+  #define DEFAULT_HOSTS_FILE "/etc/hosts"
+  
+  /* The default login shell startup file. */
+! #define SYS_PROFILE "/Software/Core/Command-line/etc/profile"
+  
+  /* The default location of the bash debugger initialization/startup file. */
+  #define DEBUGGER_START_FILE	"@DEBUGGER_START_FILE@"
